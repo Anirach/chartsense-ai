@@ -1,0 +1,15 @@
+node_modules/
+.next/
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.DS_Store
+*.log
+neo4j_data/
+postgres_data/
+redis_data/
