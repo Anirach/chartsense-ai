@@ -1,0 +1,35 @@
+```mermaid
+graph TB
+    subgraph Frontend
+        A[Next.js 14<br/>React + TypeScript<br/>Tailwind + shadcn/ui]
+    end
+
+    subgraph Backend
+        B[FastAPI<br/>Python 3.12]
+        C[GraphRAG Service<br/>Knowledge Graph]
+        D[Rule Engine<br/>Chart Completeness]
+        E[DRG/RW Calculator<br/>Code Suggestion]
+        F[Thai NLP Service<br/>Keyword Matching]
+    end
+
+    subgraph Data
+        G[(PostgreSQL 16<br/>Patient Data)]
+        H[(Neo4j 5<br/>Knowledge Graph)]
+        I[(Redis 7<br/>Cache)]
+    end
+
+    subgraph Infra
+        J[Nginx<br/>Reverse Proxy]
+    end
+
+    J --> A
+    J --> B
+    A --> B
+    B --> C
+    B --> D
+    B --> E
+    B --> F
+    B --> G
+    C --> H
+    B --> I
+```
